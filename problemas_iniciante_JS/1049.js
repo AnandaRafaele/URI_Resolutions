@@ -1,9 +1,7 @@
 var input = require("fs").readFileSync("./stdin", "utf8");
 var lines = input.split("\n");
 
-var c1 = lines.shift();
-var c2 = lines.shift();
-var c3 = lines.shift();
+var [c1, c2, c3] = lines;
 
 if (c1 === "vertebrado") {
   if (c2 === "ave") {

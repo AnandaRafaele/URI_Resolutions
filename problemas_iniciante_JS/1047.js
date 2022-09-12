@@ -1,11 +1,12 @@
 var input = require("fs").readFileSync("./stdin", "utf8");
-var lines = input.split("\n").shift().split(" ");
+var lines = input
+  .split("\n")
+  .shift()
+  .split(" ")
+  .map((item) => parseInt(item));
 
-let initHora = parseInt(lines[0]);
-let initMin = parseInt(lines[1]);
-let fimHora = parseInt(lines[2]);
-let fimMin = parseInt(lines[3]);
 let horas, minutos;
+let [initHora, initMin, fimHora, fimMin] = lines;
 
 if (initHora >= fimHora && initMin >= fimMin) {
   horas = 24 - (initHora - fimHora);

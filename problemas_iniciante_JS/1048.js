@@ -9,25 +9,28 @@ let novoSalario = salarioAtual,
   valorReajuste,
   percetual;
 
+const calcPercent = (reajuste) => reajuste * 100;
+const calcSalario = (reajuste) => salarioAtual * reajuste;
+
 if (salarioAtual <= salario[0]) {
-  percetual = reajuste[0] * 100;
-  valorReajuste = salarioAtual * reajuste[0];
+  percetual = calcPercent(reajuste[0]);
+  valorReajuste = calcSalario(reajuste[0]);
   novoSalario += valorReajuste;
 } else if (salarioAtual <= salario[1]) {
-  percetual = reajuste[1] * 100;
-  valorReajuste = salarioAtual * reajuste[1];
+  percetual = calcPercent(reajuste[1]);
+  valorReajuste = calcSalario(reajuste[1]);
   novoSalario += valorReajuste;
 } else if (salarioAtual <= salario[2]) {
-  percetual = reajuste[2] * 100;
-  valorReajuste = salarioAtual * reajuste[2];
+  percetual = calcPercent(reajuste[2]);
+  valorReajuste = calcSalario(reajuste[2]);
   novoSalario += valorReajuste;
 } else if (salarioAtual <= salario[3]) {
-  percetual = reajuste[3] * 100;
-  valorReajuste = salarioAtual * reajuste[3];
+  percetual = calcPercent(reajuste[3]);
+  valorReajuste = calcSalario(reajuste[3]);
   novoSalario += valorReajuste;
 } else {
-  percetual = reajuste[4] * 100;
-  valorReajuste = salarioAtual * reajuste[4];
+  percetual = calcPercent(reajuste[4]);
+  valorReajuste = calcSalario(reajuste[4]);
   novoSalario += valorReajuste;
 }
 

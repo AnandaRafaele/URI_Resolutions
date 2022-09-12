@@ -4,10 +4,7 @@ var lines = input.split("\n");
 //.shift() gets the first row of lines
 //.split(" ") splits the string of grades into substrings using the space separator
 //.map(() => {}) gets each strings and turn them into a float
-const grades = lines
-  .shift()
-  .split(" ")
-  .map((grade) => parseFloat(grade));
+const grades = lines.shift().split(" ").map(parseFloat);
 //destructuing of the grades array by unpacking each grade and storing the result in each variable
 const [n1, n2, n3, n4] = grades;
 //.shift() gets the second row of lines

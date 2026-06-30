@@ -1,11 +1,13 @@
 var input = require("fs").readFileSync("./stdin", "utf8");
-var lines = input.split("\n").map((item) => parseInt(item));
+var lines = input.split("\n");
 
-var ins = 0;
-var outs = 0;
+let numbers = lines.map((item) => Number.parseInt(item));
 
-for (i = 1; i <= lines[0]; i++) {
-  if (lines[i] >= 10 && lines[i] < 20) {
+let ins = 0;
+let outs = 0;
+
+for (let i = 1; i <= numbers[0]; i++) {
+  if (numbers[i] >= 10 && numbers[i] < 20) {
     ins++;
   } else {
     outs++;

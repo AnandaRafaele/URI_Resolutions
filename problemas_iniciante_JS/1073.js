@@ -1,5 +1,5 @@
 var input = require("fs").readFileSync("./stdin", "utf8");
-var lines = parseInt(input.split("\n"));
+var lines = Number.parseInt(input.split("\n"));
 
 for (var i = 2; i <= lines; i++) {
   if (i % 2 === 0) {
